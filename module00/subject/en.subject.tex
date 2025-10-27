@@ -1,0 +1,166 @@
+% vim: set ts=4 sw=4 tw=80 noexpandtab:
+
+\documentclass{42-en}
+
+%******************************************************************************%
+%                                                                              %
+%                                   Prologue                                   %
+%                                                                              %
+%******************************************************************************%
+\usepackage[
+    type={CC},
+    modifier={by-nc-sa},
+    version={4.0},
+]{doclicense}
+\usemintedstyle{monokai}
+
+
+%****************************************************************%
+%                  Re/definition of commands                     %
+%****************************************************************%
+
+\newcommand{\ailogo}[1]{\def \@ailogo {#1}}\ailogo{assets/42ai_logo.pdf}
+
+%%  Redefine \maketitle
+\makeatletter
+\def \maketitle {
+  \begin{titlepage}
+    \begin{center}
+	%\begin{figure}[t]
+	  %\includegraphics[height=8cm]{\@ailogo}
+	  \includegraphics[height=8cm]{assets/42ai_logo.pdf}
+	%\end{figure}
+      \vskip 5em
+      {\huge \@title}
+      \vskip 2em
+      {\LARGE \@subtitle}
+      \vskip 4em
+    \end{center}
+    %\begin{center}
+	  %\@author
+    %\end{center}
+	%\vskip 5em
+  \vfill
+  \begin{center}
+    \emph{\summarytitle : \@summary}
+  \end{center}
+  \vspace{2cm}
+  %\vskip 5em
+  %\doclicenseThis
+  \end{titlepage}
+}
+\makeatother
+
+\makeatletter
+\def \makeheaderfilesforbidden
+{
+  \noindent
+  \begin{tabularx}{\textwidth}{|X X  X X|}
+    \hline
+  \multicolumn{1}{|>{\raggedright}m{1cm}|}
+  {\vskip 2mm \includegraphics[height=1cm]{assets/42ai_logo.pdf}} &
+  \multicolumn{2}{>{\centering}m{12cm}}{\small Exercise : \@exnumber } &
+  \multicolumn{1}{ >{\raggedleft}p{1.5cm}|}
+%%              {\scriptsize points : \@exscore} \\ \hline
+              {} \\ \hline
+
+  \multicolumn{4}{|>{\centering}m{15cm}|}
+              {\small \@extitle} \\ \hline
+
+  \multicolumn{4}{|>{\raggedright}m{15cm}|}
+              {\small Turn-in directory : \ttfamily
+                $ex\@exnumber/$ }
+              \\ \hline
+  \multicolumn{4}{|>{\raggedright}m{15cm}|}
+              {\small Files to turn in : \ttfamily \@exfiles }
+              \\ \hline
+
+  \multicolumn{4}{|>{\raggedright}m{15cm}|}
+              {\small Forbidden functions : \ttfamily \@exforbidden }
+              \\ \hline
+
+%%  \multicolumn{4}{|>{\raggedright}m{15cm}|}
+%%              {\small Remarks : \ttfamily \@exnotes }
+%%              \\ \hline
+\end{tabularx}
+%% \exnotes
+\exrules
+\exmake
+\exauthorize{None}
+\exforbidden{None}
+\extitle{}
+\exnumber{}
+}
+\makeatother
+
+\begin{document}
+
+% =============================================================================%
+%                     =====================================                    %
+
+\title{Python Bootcamp - Module 00}
+\subtitle{Basic stuff - The Eleven Commandments}
+\author{}
+\summary{The goal of this module is to get you started with Python}
+\maketitle
+\input{en.instructions.tex}
+\newpage
+\tableofcontents
+\startexercices
+%                     =====================================                    %
+% =============================================================================%
+%******************************************************************************%
+%                                                                              %
+%                                   Exercises                                  %
+%                                                                              %
+%******************************************************************************%
+
+% ===========================(start ex 00)       %
+\input{exercises/m00ex00.tex}
+% ===========================(fin ex 00)         %
+\newpage
+% ===========================(start ex 01)       %
+\input{exercises/m00ex01.tex}
+% ===========================(fin ex 01)         %
+\newpage
+% ===========================(start ex 02)       %
+\input{exercises/m00ex02.tex}
+% ===========================(fin ex 02)         %
+\newpage
+% ===========================(start ex 03)       %
+\input{exercises/m00ex03.tex}
+% ===========================(fin ex 03)         %
+\newpage
+% ===========================(start ex 04)       %
+\input{exercises/m00ex04.tex}
+% ===========================(fin ex 04)         %
+\newpage
+% ===========================(start ex 05)       %
+\input{exercises/m00ex05.tex}
+% ===========================(fin ex 05)         %
+\newpage
+% ===========================(start ex 06)       %
+\input{exercises/m00ex06.tex}
+% ===========================(fin ex 06)         %
+\newpage
+% ===========================(start ex 07)       %
+\input{exercises/m00ex07.tex}
+% ===========================(fin ex 07)         %
+\newpage
+% ===========================(start ex 08)       %
+\input{exercises/m00ex08.tex}
+% ===========================(fin ex 08)         %
+\newpage
+% ===========================(start ex 09)       %
+\include{exercises/m00ex09.tex}
+% ===========================(fin ex 09)         %
+\newpage
+% ===========================(start ex 10)       %
+\include{exercises/m00ex10.tex}
+% ===========================(fin ex 10)         %
+\newpage
+% ================================= %
+\input{en.acknowledgements.tex}
+% ================================= %
+
+\end{document}
