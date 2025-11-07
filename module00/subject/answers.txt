@@ -1,0 +1,5 @@
+1. conda list
+2. conda search -i ${library_name} / pip show ${library_name}
+3. conda {remove/uninstal} numpy
+4. conda install ${library_name}
+5. conda env export > enviroment.yml /  pip freeze > requirements.txt
