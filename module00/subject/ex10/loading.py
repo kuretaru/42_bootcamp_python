@@ -6,7 +6,6 @@ iterable to display a progress bar during iteration. It also includes a main
 function to show an example of its usage.
 """
 
-
 import time
 import tqdm
 
@@ -36,7 +35,7 @@ def main():
     listy = range(3333)
     ret = 0
     for elem in ft_progress(listy):
-        ret += (elem+3) % 5
+        ret += (elem + 3) % 5
         time.sleep(0.01)
     print()
     print(f"Result: {ret}")

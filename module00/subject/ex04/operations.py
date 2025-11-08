@@ -1,18 +1,20 @@
 import sys
 import math
 
-def calc(a,b):
+
+def calc(a, b):
     print(f"Sum:\t\t{a+b}")
     print(f"Difference:\t{a-b}")
     print(f"Product:\t{a*b}")
-    if (b==0):
+    if (b == 0):
         print("Quotient:\tERROR (division by zero)")
         print("Quotient:\tERROR (division by zero)")
     else:
         print(f"Quotient:\t{a/b}")
         print(f"Remainder:\t{a%b}")
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     match len(sys.argv):
         case 3:
             try:
