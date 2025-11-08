@@ -1,6 +1,12 @@
 import sys
 
 def main():
+    """
+    Offers an updated list of the string and after which filters it with selected rules.
+
+    Returns:
+        None: If some Error accured.
+    """
     punctuation = [
          "\"", "'", ":", ":", "/", "?", "\\", ".", ">", ",", "<", 
          "[", "{", "]", "}", "|", "-", "_", "!", "`", "~", "(", ")"
@@ -24,7 +30,6 @@ def main():
             if len(S_splited[i]) > int(N):
                 new_S.append(S_splited[i])
         print(new_S)
-
     else:
         print("ERROR!")
 
